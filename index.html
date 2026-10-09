@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>Jesus Loves Children</title>
+  <meta name="description" content="A joyful page of Bible promises for children: Jesus welcomes you, loves you, made you wonderfully, stays with you, and hears your prayers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --sky: #dff4ff;
+      --sky-deep: #b9e8ff;
+      --paper: #fffdf8;
+      --ink: #18354a;
+      --muted: #37566c;
+      --blue: #1576a8;
+      --blue-soft: #d9f2ff;
+      --gold: #f7b928;
+      --gold-soft: #fff2b9;
+      --coral: #e35d4f;
+      --coral-soft: #ffe0da;
+      --green: #4b8f52;
+      --green-soft: #dff2d6;
+      --lavender: #7056a6;
+      --lavender-soft: #ede5ff;
+      --line: rgba(24, 53, 74, .15);
+      --shadow: 0 18px 50px rgba(51, 94, 112, .16);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --sky: #102c3d;
+        --sky-deep: #163d52;
+        --paper: #172b34;
+        --ink: #f8f3e7;
+        --muted: #d5e5ec;
+        --blue: #78cdf3;
+        --blue-soft: #183f54;
+        --gold: #ffd267;
+        --gold-soft: #4c401e;
+        --coral: #ff9688;
+        --coral-soft: #50302d;
+        --green: #a6dda2;
+        --green-soft: #29472f;
+        --lavender: #c6afff;
+        --lavender-soft: #372f50;
+        --line: rgba(255, 255, 255, .15);
+        --shadow: 0 18px 50px rgba(0, 0, 0, .27);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--sky);
+      color: var(--ink);
+      font-family: "Andika", sans-serif;
+      font-size: 18px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+
+    .hero {
+      position: relative;
+      min-height: min(760px, 92svh);
+      display: grid;
+      align-items: center;
+      background: var(--sky-deep);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 80px;
+      background: var(--paper);
+      clip-path: ellipse(62% 48% at 50% 100%);
+      z-index: 3;
+    }
+    .hero-art {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -2;
+    }
+    .hero-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(232,247,255,.96) 0%, rgba(232,247,255,.91) 34%, rgba(232,247,255,.18) 66%, rgba(232,247,255,.02) 100%);
+      z-index: -1;
+    }
+    @media (prefers-color-scheme: dark) {
+      .hero-shade { background: linear-gradient(90deg, rgba(11,35,48,.97) 0%, rgba(11,35,48,.91) 38%, rgba(11,35,48,.24) 70%, rgba(11,35,48,.08) 100%); }
+    }
+    .hero-copy {
+      width: min(1200px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 76px 0 116px;
+    }
+    .hero-copy > * { max-width: 570px; }
+    .sun-line {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin: 0 0 20px;
+      color: var(--blue);
+      font-family: "Nunito", sans-serif;
+      font-weight: 900;
+    }
+    .sun {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 7px color-mix(in srgb, var(--gold) 24%, transparent);
+    }
+    h1, h2, h3 {
+      font-family: "Nunito", sans-serif;
+      line-height: 1.05;
+      margin-top: 0;
+    }
+    h1 {
+      margin-bottom: 24px;
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      letter-spacing: -.055em;
+      max-width: 690px !important;
+    }
+    .hero p {
+      margin: 0;
+      font-size: clamp(1.16rem, 2.5vw, 1.55rem);
+      color: var(--muted);
+      max-width: 500px;
+    }
+    .hero strong { color: var(--coral); }
+
+    main { background: var(--paper); }
+    .intro {
+      width: min(760px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0 36px;
+      text-align: center;
+    }
+    .intro h2 {
+      font-size: clamp(2.15rem, 6vw, 3.75rem);
+      margin-bottom: 16px;
+      letter-spacing: -.035em;
+    }
+    .intro p { margin: 0; color: var(--muted); font-size: 1.1rem; }
+
+    .promises {
+      width: min(980px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 28px 0 110px;
+      display: grid;
+      gap: 42px;
+    }
+    .promise {
+      display: grid;
+      grid-template-columns: 132px minmax(0, 1fr);
+      gap: 34px;
+      align-items: start;
+      padding: 42px;
+      border: 2px solid var(--line);
+      box-shadow: var(--shadow);
+      background: var(--paper);
+    }
+    .promise:nth-child(1), .promise:nth-child(4) { border-radius: 48px 18px 48px 18px; }
+    .promise:nth-child(2), .promise:nth-child(5) { border-radius: 18px 48px 18px 48px; }
+    .promise:nth-child(3) { border-radius: 48px; }
+    .picture {
+      width: 132px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+    }
+    .picture svg { width: 76%; height: 76%; }
+    .welcome .picture { background: var(--gold-soft); color: #9a6810; }
+    .loved .picture { background: var(--coral-soft); color: var(--coral); }
+    .made .picture { background: var(--green-soft); color: var(--green); }
+    .with-you .picture { background: var(--blue-soft); color: var(--blue); }
+    .prayer .picture { background: var(--lavender-soft); color: var(--lavender); }
+    .promise h3 {
+      font-size: clamp(1.8rem, 4.8vw, 2.6rem);
+      letter-spacing: -.025em;
+      margin-bottom: 10px;
+    }
+    .kid-line {
+      color: var(--muted);
+      margin: 0 0 22px;
+      font-size: 1.08rem;
+    }
+    blockquote {
+      margin: 0;
+      padding: 20px 24px;
+      background: color-mix(in srgb, var(--sky) 36%, var(--paper));
+      border-radius: 14px 26px 14px 26px;
+      font-size: clamp(1.06rem, 2.4vw, 1.25rem);
+      font-weight: 700;
+      line-height: 1.62;
+    }
+    cite {
+      display: block;
+      margin-top: 12px;
+      color: var(--blue);
+      font-family: "Nunito", sans-serif;
+      font-style: normal;
+      font-size: .92rem;
+      font-weight: 900;
+    }
+
+    .closing {
+      position: relative;
+      overflow: hidden;
+      background: var(--green-soft);
+      text-align: center;
+      padding: 100px 20px 110px;
+    }
+    .closing::before, .closing::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--gold) 30%, transparent);
+    }
+    .closing::before { left: -80px; top: -70px; }
+    .closing::after { right: -80px; bottom: -70px; }
+    .closing h2 {
+      margin: 0 auto 18px;
+      max-width: 780px;
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      letter-spacing: -.04em;
+    }
+    .closing p { margin: 0 auto; max-width: 650px; color: var(--muted); font-size: 1.15rem; }
+    .amen {
+      display: inline-block;
+      margin-top: 34px;
+      padding: 12px 26px;
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--green);
+      font-family: "Nunito", sans-serif;
+      font-weight: 900;
+      box-shadow: 0 8px 0 color-mix(in srgb, var(--green) 25%, transparent);
+    }
+    footer {
+      background: var(--paper);
+      color: var(--muted);
+      padding: 28px 20px max(30px, env(safe-area-inset-bottom));
+      text-align: center;
+      font-size: .92rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero { min-height: 760px; align-items: end; }
+      .hero-art { height: 52%; top: 0; object-position: 69% center; }
+      .hero-shade { background: linear-gradient(0deg, var(--sky-deep) 0%, var(--sky-deep) 47%, rgba(223,244,255,.42) 72%, rgba(223,244,255,.05) 100%); }
+      @media (prefers-color-scheme: dark) {
+        .hero-shade { background: linear-gradient(0deg, var(--sky-deep) 0%, var(--sky-deep) 47%, rgba(16,44,61,.48) 72%, rgba(16,44,61,.06) 100%); }
+      }
+      .hero-copy { padding: 330px 0 112px; }
+      .hero-copy > * { max-width: 100%; }
+      h1 { font-size: clamp(3.1rem, 16vw, 5.1rem); }
+      .promise { grid-template-columns: 1fr; padding: 28px 24px 26px; gap: 22px; }
+      .picture { width: 92px; }
+      blockquote { padding: 18px; }
+    }
+
+    @media (max-width: 390px) {
+      body { font-size: 17px; }
+      .hero-copy, .intro, .promises { width: min(100% - 28px, 980px); }
+      .promise { padding: 24px 19px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img class="hero-art" src="illustration.jpg" alt="Storybook illustration of Jesus sitting among smiling children in a sunny field of flowers" />
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="sun-line"><span class="sun" aria-hidden="true"></span> A Bible page for little hearts</p>
+      <h1>You are loved by Jesus.</h1>
+      <p>He knows your name. He is glad when you come to Him. And His love for you is <strong>very, very big.</strong></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="promises-title">
+      <h2 id="promises-title">Five wonderful promises</h2>
+      <p>Read them slowly. They are true for you today.</p>
+    </section>
+
+    <section class="promises" aria-label="Bible promises for children">
+      <article class="promise welcome">
+        <div class="picture" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none"><path d="M16 62c10-9 20-10 28-1 5-18 18-26 31-17 10 7 11 26 1 38H25c-10-5-15-12-9-20Z" fill="currentColor" opacity=".25"/><circle cx="35" cy="37" r="11" fill="currentColor"/><circle cx="66" cy="29" r="13" fill="currentColor"/><path d="M19 79c2-20 9-30 20-30s17 10 18 30M47 78c2-23 9-36 21-36 13 0 20 13 21 36" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <h3>Jesus welcomes children</h3>
+          <p class="kid-line">You never bother Jesus. He wants you close to Him.</p>
+          <blockquote>“Allow the little children to come to me! Don’t forbid them, for God’s Kingdom belongs to such as these.”<cite>Mark 10:14 · World English Bible</cite></blockquote>
+        </div>
+      </article>
+
+      <article class="promise loved">
+        <div class="picture" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 86 18 56C-3 35 27 7 50 31 73 7 103 35 82 56L50 86Z"/><path d="M26 38c4-9 12-12 19-8" stroke="white" stroke-opacity=".55" stroke-width="7" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div>
+          <h3>Jesus loves you</h3>
+          <p class="kid-line">God loved the whole world so much that He gave us Jesus. Everyone who trusts in Him receives life that never ends.</p>
+          <blockquote>“For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life.”<cite>John 3:16 · World English Bible</cite></blockquote>
+        </div>
+      </article>
+
+      <article class="promise made">
+        <div class="picture" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"><path d="M50 11v14M50 75v14M11 50h14M75 50h14M22 22l10 10M68 68l10 10M78 22 68 32M32 68 22 78"/><circle cx="50" cy="50" r="19" fill="currentColor" stroke="none"/><path d="m42 51 6 6 12-15" stroke="white" stroke-width="6"/></svg>
+        </div>
+        <div>
+          <h3>You are wonderfully made</h3>
+          <p class="kid-line">God made you on purpose. There is no one else exactly like you.</p>
+          <blockquote>“I will give thanks to you, for I am fearfully and wonderfully made. Your works are wonderful. My soul knows that very well.”<cite>Psalm 139:14 · World English Bible</cite></blockquote>
+        </div>
+      </article>
+
+      <article class="promise with-you">
+        <div class="picture" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none"><path d="M13 73 39 42l15 17 12-14 22 28H13Z" fill="currentColor" opacity=".34"/><path d="m13 73 26-31 15 17 12-14 22 28" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/><path d="M39 24c6-13 25-8 23 7 17-3 22 18 7 23H33c-15-5-9-25 6-30Z" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <h3>God is always with you</h3>
+          <p class="kid-line">At home, at school, awake or asleep—you are never alone.</p>
+          <blockquote>“Haven’t I commanded you? Be strong and courageous. Don’t be afraid or be dismayed, for Yahweh your God is with you wherever you go.”<cite>Joshua 1:9 · World English Bible</cite></blockquote>
+        </div>
+      </article>
+
+      <article class="promise prayer">
+        <div class="picture" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 27h62v43H52L34 84V70H19V27Z" fill="currentColor" opacity=".2"/><path d="M19 27h62v43H52L34 84V70H19V27Z"/><circle cx="35" cy="49" r="4" fill="currentColor" stroke="none"/><circle cx="50" cy="49" r="4" fill="currentColor" stroke="none"/><circle cx="65" cy="49" r="4" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div>
+          <h3>You can talk to Jesus anytime</h3>
+          <p class="kid-line">Prayer is talking with Jesus. Tell Him what makes you happy, what hurts, and what you need. He listens.</p>
+          <blockquote>“Ask, and it will be given you. Seek, and you will find. Knock, and it will be opened for you.”<cite>Matthew 7:7 · World English Bible</cite></blockquote>
+        </div>
+      </article>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <h2 id="closing-title">Come to Jesus just as you are.</h2>
+      <p>You do not have to be the biggest, bravest, or best. Jesus loves you, welcomes you, and will never turn away a little heart that comes to Him.</p>
+      <span class="amen">That is good news!</span>
+    </section>
+  </main>
+
+  <footer>Bible quotations are from the World English Bible, a public-domain translation.</footer>
+</body>
+</html>
