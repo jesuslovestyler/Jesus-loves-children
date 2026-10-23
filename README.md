@@ -1,5 +1,8 @@
 # Jesus Loves Children
 
-A bright, joyful page for children about how much Jesus loves them — simple Bible verses for kids and families, written so a young child (or a parent reading aloud) can follow.
+What Jesus says about children — how He welcomed them, blessed them, and pointed to their faith as the pattern for entering the kingdom. Verses from the World English Bible, gathered for children and the people who love them.
 
-Built with Muse artifacts. Scripture quotations are from the World English Bible (public domain).
+**Live:** https://jesuslovestyler.github.io/Jesus-loves-children/
+**Home:** https://jesuslovestyler.com/
+
+Scripture is quoted from the World English Bible, a public-domain translation. Released into the public domain (Unlicense — see LICENSE). Built by Tyler with Noki.
